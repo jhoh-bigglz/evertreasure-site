@@ -1,0 +1,25 @@
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+
+# misc
+.DS_Store
+*.pem
+
+# env files (실제 키가 담긴 파일은 절대 커밋하지 마세요)
+.env
+.env.local
+.env*.local
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# 레거시 원본 (참고용, 저장소에는 미포함)
+/origin
+
+# Claude Code 로컬 설정 (개인별 권한 설정, 공유 불필요)
+/.claude/

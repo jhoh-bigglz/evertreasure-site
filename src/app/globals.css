@@ -1,0 +1,31 @@
+/*
+ * 리팩토링 과정에서 추가된 최소한의 보조 스타일.
+ * 사이트의 본 스타일은 public/assets/css/styles.css (원본 그대로 이식)에 있습니다.
+ */
+
+/* 무한 롤링 슬라이드 트랙 (원본 infiniteslide.js가 JS로 지정하던 스타일을 CSS로 이동) */
+.tf-marquee-track {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: max-content;
+  animation: tf-marquee 30s linear infinite;
+}
+
+.tf-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.tf-marquee-track > .image-brand {
+  flex: none;
+  display: block;
+}
+
+@keyframes tf-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(var(--slide-distance, -100%), 0, 0);
+  }
+}
